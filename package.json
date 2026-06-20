@@ -1,0 +1,12 @@
+{
+  "name": "ai-health-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm.cmd install && npm.cmd install --prefix backend && npm.cmd install --prefix frontend",
+    "dev": "npx.cmd concurrently \"npm.cmd run dev --prefix backend\" \"npm.cmd run dev --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

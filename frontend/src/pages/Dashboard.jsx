@@ -40,7 +40,7 @@ export default function Dashboard() {
     // Fetch Tip
     const fetchTip = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/health-tips', {
+        const res = await fetch('/_/backend/api/health-tips', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ water: metrics.water, sleep: metrics.sleep, steps: metrics.steps })

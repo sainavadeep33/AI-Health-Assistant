@@ -33,7 +33,7 @@ export default function SymptomChecker() {
     setResult(null);
 
     try {
-      const res = await fetch('http://localhost:5000/api/symptom-check', {
+      const res = await fetch('/_/backend/api/symptom-check', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

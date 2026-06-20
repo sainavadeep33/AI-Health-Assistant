@@ -138,6 +138,14 @@ app.post('/api/health-tips', async (req, res) => {
     }
 })
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.get('/', (req, res) => {
+  res.send('AI Health Assistant Backend API is running');
 });
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+}
+
+export default app;
